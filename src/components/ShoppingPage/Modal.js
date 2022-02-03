@@ -6,11 +6,30 @@ import { useState } from "react";
 
 function Modal({ setOpenModal, categoryValue, setCategoryValue, id, email }) {
   const [newCategories, setNewCategories] = useState([]);
+  const checkedList = categories.map((item, index) => {
+    if (categoryValue.includes(item)) return true;
+    else return false;
+  });
+  console.log(checkedList);
   const handleOnChange = (position) => {
-    newCategories.push(categories[position]);
+    checkedList.map((item, index) => {
+      if (checkedList[position] === false) {
+        checkedList[position] = true;
+      } else {
+        checkedList[position] = false;
+      }
+    });
+    console.log("newCategoryunderhandle", newCategories);
   };
+
   const setDiff = (e) => {
-    console.log(id);
+    newCategories.length = 0;
+    checkedList.map((item, index) => {
+      if (checkedList[index] === true) {
+        newCategories.push(categories[index]);
+      }
+    });
+    console.log("newCategoryUnderSubmit", newCategories);
     fetch(`https://61f3a5d810f0f7001768c544.mockapi.io/Preferences/${id}`, {
       method: "PUT",
       // Adding body or contents to send
@@ -56,6 +75,7 @@ function Modal({ setOpenModal, categoryValue, setCategoryValue, id, email }) {
                       value={val}
                       // checked={checkedState[index]}
                       onChange={() => handleOnChange(index)}
+                      defaultChecked={checkedList[index]}
                     />
                     <label htmlFor={`custom-checkbox-${index}`}>{val}</label>
                   </div>

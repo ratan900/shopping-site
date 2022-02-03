@@ -18,7 +18,7 @@ function Shopping() {
   // const [userPreferences, setUserPreferences] = useState([]);
   const id = location.id;
   const email = location.email;
-  const productPerPage = 3;
+  const productPerPage = 6;
   const productVisited = productPerPage * pageNumber;
 
   const onSearchChange = (event) => {

@@ -4,6 +4,7 @@ import { categories } from "./categories";
 import {
   useHistory,
   useLocation,
+  Link,
 } from "react-router-dom/cjs/react-router-dom.min";
 import "./Preference.css";
 
@@ -51,6 +52,11 @@ function Preference() {
 
   return (
     <div>
+      <nav style={{ display: "flex", justifyContent: "center" }}>
+        <Link to="/">
+          <p className="f3 link dim black underline pa3 pointer">Sign Out</p>
+        </Link>
+      </nav>
       <h1
         className="d-flex justify-content-center mt-5"
         style={{ fontFamily: "monospace" }}

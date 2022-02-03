@@ -9,7 +9,7 @@ const Navigation = ({ openModal }) => {
           className="f3 link dim black underline pa3 pointer"
           onClick={openModal}
         >
-          Filter
+          Preferences
         </p>
         {/* </Link> */}
         <Link to="/">

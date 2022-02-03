@@ -3,7 +3,7 @@ body {
   font-family: monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
     to right top,
     #1defe1,
     #34e6f3,
@@ -17,5 +17,13 @@ body {
     #7de1ff,
     #65effd,
     #5ffbf1
+  ); */
+  background-image: linear-gradient(
+    to right top,
+    #eef1f6,
+    #e4ebee,
+    #dde5e5,
+    #d8dedb,
+    #d5d7d1
   );
 }

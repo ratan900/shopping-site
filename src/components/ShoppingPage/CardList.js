@@ -11,6 +11,7 @@ const CardList = ({ products }) => {
             price={products[i].price}
             name={products[i].name}
             category={products[i].category}
+            id={products[i].id}
           />
         );
       })}
