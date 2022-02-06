@@ -5,6 +5,12 @@ import "./index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "tachyons";
 
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("/sw.js").then(function () {
+    console.log("SW registered");
+  });
+}
+
 ReactDOM.render(
   <React.StrictMode>
     <App />

@@ -1,19 +1,24 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Shop on",
+  "name": "Shopping app by Ratan",
   "icons": [
     {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "src": "/shoplogo1.png",
+      "sizes": "96x96",
+      "type": "image/png"
     },
     {
-      "src": "logo192.png",
-      "type": "image/png",
-      "sizes": "192x192"
+      "src": "/shoplogo2.png",
+      "sizes": "144x144",
+      "type": "image/png"
     },
     {
-      "src": "logo512.png",
+      "src": "/shoplogo3.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "/shoplogo.png",
       "type": "image/png",
       "sizes": "512x512"
     }
