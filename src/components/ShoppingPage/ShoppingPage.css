@@ -1,29 +1,3 @@
-/* @media (min-width: 350px) {
-  .paginationBttns {
-    font-size: 8pt;
-    width: 50%;
-    padding: 4px;
-  }
-}
-@media (min-width: 500px) {
-  .paginationBttns {
-    font-size: 10pt;
-    padding: 5px;
-  }
-}
-@media (min-width: 700px) {
-  .paginationBttns {
-    font-size: 12pt;
-    padding: 6px;
-  }
-}
-@media (min-width: 900px) {
-  .paginationBttns {
-    font-size: 14pt;
-    padding: 7px;
-  }
-} */
-
 .paginationBttns {
   width: 100%;
   height: 130px;
@@ -54,10 +28,10 @@
 
 .paginationBttns a:hover {
   color: white;
-  background-color: purple;
+  background-color: #0c6efd;
 }
 
 .paginationActive a {
   color: white;
-  background-color: purple;
+  background-color: #0c6efd;
 }

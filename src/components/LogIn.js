@@ -57,37 +57,43 @@ export default function LogIn() {
   return (
     <div>
       <h1
-        className="d-flex justify-content-center mt-5 text-primary mb-4"
+        className="d-flex justify-content-center mt5"
         style={{ fontFamily: "monospace" }}
       >
-        <em>Shop On Shopping App</em>
+        <em>Ratan's E-Market Place</em>
       </h1>
-      <div className="w-100" style={{ maxWidth: "400px" }}>
+      <div className="w-100" style={{ maxWidth: "400px", margin: "auto" }}>
         <div>
-          <Card>
-            <Card.Body>
-              {error && <Alert varient="danger">{error}</Alert>}
-              <h2 className="text-center mb-4">Log In</h2>
-              <Form onSubmit={onSubmitHandler}>
-                <Form.Group id="email">
-                  <Form.Label>Email</Form.Label>
-                  <Form.Control type="email" ref={emailRef} required />
-                </Form.Group>
-                <Form.Group id="password">
-                  <Form.Label>Password</Form.Label>
-                  <Form.Control type="password" ref={passwordRef} required />
-                </Form.Group>
-                <Button disabled={loading} className="w-100 mt-3" type="submit">
-                  LogIn
-                </Button>
-              </Form>
-              <div className="w-100 text-center mt-3">
-                <Link to="/forgot-password">Forgot Password?</Link>
-              </div>
-            </Card.Body>
-          </Card>
-          <div className="w-100 text-center mt-2">
-            Need an account? <Link to="/signup">Sign Up</Link>
+          <div>
+            <Card>
+              <Card.Body>
+                {error && <Alert varient="danger">{error}</Alert>}
+                <h2 className="text-center mb-4">Log In</h2>
+                <Form onSubmit={onSubmitHandler}>
+                  <Form.Group id="email">
+                    <Form.Label>Email</Form.Label>
+                    <Form.Control type="email" ref={emailRef} required />
+                  </Form.Group>
+                  <Form.Group id="password">
+                    <Form.Label>Password</Form.Label>
+                    <Form.Control type="password" ref={passwordRef} required />
+                  </Form.Group>
+                  <Button
+                    disabled={loading}
+                    className="w-100 mt-3"
+                    type="submit"
+                  >
+                    LogIn
+                  </Button>
+                </Form>
+                <div className="w-100 text-center mt-3">
+                  <Link to="/forgot-password">Forgot Password?</Link>
+                </div>
+              </Card.Body>
+            </Card>
+            <div className="w-100 text-center mt-2">
+              Need an account? <Link to="/signup">Sign Up</Link>
+            </div>
           </div>
         </div>
       </div>

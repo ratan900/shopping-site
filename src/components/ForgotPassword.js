@@ -27,7 +27,7 @@ export default function ForgotPassword() {
   }
 
   return (
-    <div className="w-100" style={{ maxWidth: "400px" }}>
+    <div className="w-100 mt-5" style={{ maxWidth: "400px", margin: "auto" }}>
       <>
         <Card>
           <Card.Body>

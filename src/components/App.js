@@ -10,12 +10,18 @@ import Shopping from "./ShoppingPage/ShoppingPage";
 import Preference from "./PreferencePage/Preference";
 import Modal from "./ShoppingPage/Modal";
 
+// if ("serviceWorker" in navigator) {
+//   navigator.serviceWorker.register("/sw.js").then(function () {
+//     console.log("SW registered");
+//   });
+// }
+
 function App() {
   return (
-    <div>
+    <>
       <Container
-        className="d-flex mt-5 justify-content-center"
-        style={{ minHeight: "100vh" }}
+      // className="d-flex mt-5 justify-content-center"
+      // style={{ minHeight: "100vh" }}
       >
         <Router>
           <AuthProvider>
@@ -30,7 +36,7 @@ function App() {
           </AuthProvider>
         </Router>
       </Container>
-    </div>
+    </>
   );
 }
 

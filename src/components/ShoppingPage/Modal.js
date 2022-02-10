@@ -4,7 +4,14 @@ import { categories } from "../PreferencePage/categories";
 import "./styles.css";
 import { useState } from "react";
 
-function Modal({ setOpenModal, categoryValue, setCategoryValue, id, email }) {
+function Modal({
+  setOpenModal,
+  categoryValue,
+  setCategoryValue,
+  id,
+  email,
+  setPage,
+}) {
   const [newCategories, setNewCategories] = useState([]);
   const checkedList = categories.map((item, index) => {
     if (categoryValue.includes(item)) return true;
@@ -43,6 +50,7 @@ function Modal({ setOpenModal, categoryValue, setCategoryValue, id, email }) {
     });
     setCategoryValue(newCategories);
     setOpenModal(false);
+    setPage(0);
   };
 
   return (

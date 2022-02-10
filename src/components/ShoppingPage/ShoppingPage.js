@@ -18,10 +18,11 @@ function Shopping() {
   // const [userPreferences, setUserPreferences] = useState([]);
   const id = location.id;
   const email = location.email;
-  const productPerPage = 6;
+  const productPerPage = 8;
   const productVisited = productPerPage * pageNumber;
 
   const onSearchChange = (event) => {
+    setPageNumber(0);
     setSearchField(event.target.value);
   };
 
@@ -71,15 +72,16 @@ function Shopping() {
           setCategoryValue={setCategoryArray}
           id={id}
           email={email}
+          setPage={setPageNumber}
         />
       )}
+      <Navigation openModal={openModal} searchChange={onSearchChange} />
       {!products.length ? (
         <h1 style={{ fontFamily: "monospace" }}>Loading</h1>
       ) : (
         <div>
-          <Navigation openModal={openModal} />
-          <div className="tc">
-            <SearchBox searchChange={onSearchChange} />
+          {/* <Navigation openModal={openModal} searchChange={onSearchChange} /> */}
+          <div className="tc mt4">
             <CardList products={displayProducts}></CardList>
           </div>
           <ReactPaginate
@@ -91,6 +93,11 @@ function Shopping() {
           />
         </div>
       )}
+      <center>
+        <p class="footer-description" style={{ marginTop: "80px" }}>
+          ©Ratan Kumar
+        </p>
+      </center>
     </div>
   );
 }

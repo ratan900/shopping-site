@@ -30,12 +30,12 @@ export default function SignUp() {
   return (
     <div>
       <h1
-        className="d-flex justify-content-center mt-5"
+        className="d-flex justify-content-center mt5"
         style={{ fontFamily: "monospace" }}
       >
-        <em>Shop On Shopping App</em>
+        <em>Ratan's E-Market Place</em>
       </h1>
-      <div className="w-100" style={{ maxWidth: "400px" }}>
+      <div className="w-100" style={{ maxWidth: "400px", margin: "auto" }}>
         <div>
           <Card>
             <Card.Body>

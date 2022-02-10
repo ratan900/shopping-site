@@ -1,0 +1,7 @@
+{
+  "projects": {
+    "hosting": "shopon-development",
+    "default": "shopon-development"
+  },
+  "targets": {}
+}
